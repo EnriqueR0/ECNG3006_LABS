@@ -15,7 +15,7 @@
 
 void app_main()
 {
-    printf("Hello world!\n");
+    printf("Enrique Ramkissoon_816013485\n");
 
     /* Print chip information */
     esp_chip_info_t chip_info;
@@ -27,8 +27,9 @@ void app_main()
 
     printf("%dMB %s flash\n", spi_flash_get_chip_size() / (1024 * 1024),
             (chip_info.features & CHIP_FEATURE_EMB_FLASH) ? "embedded" : "external");
-
-    for (int i = 10; i >= 0; i--) {
+    
+    //Last 2 numbers of ID = 85. 85%15 = 10
+    for (int i = (85%15); i >= 0; i--) {
         printf("Restarting in %d seconds...\n", i);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
@@ -36,3 +37,4 @@ void app_main()
     fflush(stdout);
     esp_restart();
 }
+
