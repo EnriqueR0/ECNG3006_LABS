@@ -1,0 +1,91 @@
+--- idf_monitor on /dev/ttyUSB0 74880 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+load 0x40100000, len 7136, room 16 
+tail 0
+chksum 0x1e
+load 0x3ffe8408, len 24, room 8 
+tail 0
+chksum 0xa7
+load 0x3ffe8420, len 3336, room 8 
+tail 0
+chksum 0xbf
+I (43) boot: ESP-IDF v3.4-dev-357-g3aeaa893-dirty 2nd stage bootloader
+I (43) boot: compile time 02:38:17
+I (45) boot: SPI Speed      : 40MHz
+I (51) boot: SPI Mode       : DOUT
+I (57) boot: SPI Flash Size : 1MB
+I (63) boot: Partition Table:
+I (69) boot: ## Label            Usage          Type ST Offset   Length
+I (80) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (92) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (103) boot:  2 factory          factory app      00 00 00010000 000f0000
+I (115) boot: End of partition table
+I (121) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x14700 ( 83712) map
+0x40210010: _stext at ??:?
+
+I (171) esp_image: segment 1: paddr=0x00024718 vaddr=0x40224710 size=0x057e0 ( 22496) map
+I (182) esp_image: segment 2: paddr=0x00029f00 vaddr=0x3ffe8000 size=0x003dc (   988) load
+I (183) esp_image: segment 3: paddr=0x0002a2e4 vaddr=0x40100000 size=0x00080 (   128) load
+I (196) esp_image: segment 4: paddr=0x0002a36c vaddr=0x40100080 size=0x0451c ( 17692) load
+I (217) boot: Loaded app from partition at offset 0x10000
+I (248) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+I (254) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 
+I (265) main: cnt: 0
+
+I (1262) main: cnt: 1
+
+I (2262) main: cnt: 2
+
+I (2264) main: GPIO[0] intr, val: 0
+
+I (3262) main: cnt: 3
+
+I (4262) main: cnt: 4
+
+I (4264) main: GPIO[0] intr, val: 0
+
+I (5262) main: cnt: 5
+
+I (6262) main: cnt: 6
+
+I (6264) main: GPIO[0] intr, val: 0
+
+I (7262) main: cnt: 7
+
+I (8262) main: cnt: 8
+
+I (8264) main: GPIO[0] intr, val: 0
+
+I (9262) main: cnt: 9
+
+I (10263) main: cnt: 10
+
+I (10265) main: GPIO[0] intr, val: 0
+
+I (11263) main: cnt: 11
+
+I (12263) main: cnt: 12
+
+I (12265) main: GPIO[0] intr, val: 0
+
+I (13263) main: cnt: 13
+
+I (14263) main: cnt: 14
+
+I (14265) main: GPIO[0] intr, val: 0
+
+I (15263) main: cnt: 15
+
+I (16263) main: cnt: 16
+
+I (16265) main: GPIO[0] intr, val: 0
+
+I (17263) main: cnt: 17
+
+I (18263) main: cnt: 18
+
+I (18265) main: GPIO[0] intr, val: 0
+
