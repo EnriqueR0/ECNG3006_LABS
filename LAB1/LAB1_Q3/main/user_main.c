@@ -101,6 +101,18 @@ static const char *TAG = "main";
 
 
 /*
+CONNECTION INFO:
+ESP SIDE=>ADS SIDE:
+GP0=>SCL (ADS)
+GP2=>SDA (ADS)
+
+ON ADS:
+VDD =>3.3V
+GND=>GND
+ADDR=>GND
+SCL=>GP0 (ESP)
+SDA=>GP2 (ESP)
+
 From ADS1115 Spec sheet:
 To initialize in continuous conversion mode and read value:
 1. Write to Config register:
@@ -231,7 +243,7 @@ static esp_err_t i2c_example_master_ads1115_init(i2c_port_t i2c_num)
     uint8_t cmd_data[2];
     vTaskDelay(100 / portTICK_RATE_MS);
     i2c_example_master_init();
-    cmd_data[0] = 0x84;    //config register value for continuous mode
+    cmd_data[0] = 0xC4;    //config register value for continuous mode
     cmd_data[1] = 0x83;
 
     ESP_ERROR_CHECK(i2c_example_master_ads1115_write(i2c_num, CONFIG_REG, &cmd_data[0], 2)); // SET CONFIG (Step 1)
@@ -285,13 +297,13 @@ static void i2c_task_example(void *arg)
 
             // ESP_LOGI(TAG, "error_count: %d\n", error_count);
 
-            uint16_t adc_reading = 0x00;
+            uint16_t adc_reading = 0x00; //THIS IS IN 2s COMPLEMENT FORMAT !!!!
 
             adc_reading = sensor_data[0];
             adc_reading = adc_reading << 8;
             adc_reading = adc_reading | sensor_data[1];
 
-            ESP_LOGI(TAG,"ADC OUT: %d\n",adc_reading);
+            ESP_LOGI(TAG,"ADC OUT 2c: %d\n",adc_reading);
 
         } else {
             ESP_LOGE(TAG, "No ack, sensor not connected...skip...\n");
