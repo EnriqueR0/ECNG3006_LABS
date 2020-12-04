@@ -1,0 +1,13 @@
+# Target labels
+ mconf-idf
+# Source files and their labels
+/home/enrr/esp/ECNG3006_LABS/LAB1/LAB1_Q3/build/CMakeFiles/mconf-idf
+/home/enrr/esp/ECNG3006_LABS/LAB1/LAB1_Q3/build/CMakeFiles/mconf-idf.rule
+/home/enrr/esp/ECNG3006_LABS/LAB1/LAB1_Q3/build/CMakeFiles/mconf-idf-complete.rule
+/home/enrr/esp/ECNG3006_LABS/LAB1/LAB1_Q3/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install.rule
+/home/enrr/esp/ECNG3006_LABS/LAB1/LAB1_Q3/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir.rule
+/home/enrr/esp/ECNG3006_LABS/LAB1/LAB1_Q3/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download.rule
+/home/enrr/esp/ECNG3006_LABS/LAB1/LAB1_Q3/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update.rule
+/home/enrr/esp/ECNG3006_LABS/LAB1/LAB1_Q3/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch.rule
+/home/enrr/esp/ECNG3006_LABS/LAB1/LAB1_Q3/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure.rule
+/home/enrr/esp/ECNG3006_LABS/LAB1/LAB1_Q3/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build.rule
