@@ -243,7 +243,7 @@ static esp_err_t i2c_example_master_ads1115_init(i2c_port_t i2c_num)
     uint8_t cmd_data[2];
     vTaskDelay(100 / portTICK_RATE_MS);
     i2c_example_master_init();
-    cmd_data[0] = 0xC4;    //config register value for continuous mode
+    cmd_data[0] = 0xC2;    //config register value for continuous mode and FSR=4.096V and read Ain0 to GND at 128SPS
     cmd_data[1] = 0x83;
 
     ESP_ERROR_CHECK(i2c_example_master_ads1115_write(i2c_num, CONFIG_REG, &cmd_data[0], 2)); // SET CONFIG (Step 1)
@@ -297,13 +297,34 @@ static void i2c_task_example(void *arg)
 
             // ESP_LOGI(TAG, "error_count: %d\n", error_count);
 
-            uint16_t adc_reading = 0x00; //THIS IS IN 2s COMPLEMENT FORMAT !!!!
+            uint16_t adc_reading = 0x00; //THIS IS IN 2s COMPLEMENT REPRESENTATION !!!!
 
             adc_reading = sensor_data[0];
             adc_reading = adc_reading << 8;
             adc_reading = adc_reading | sensor_data[1];
 
-            ESP_LOGI(TAG,"ADC OUT 2c: %d\n",adc_reading);
+            //ESP_LOGI(TAG,"ADC OUT 2c: %d\n",adc_reading);
+
+            int16_t adc_reading_signed = (int16_t)adc_reading;
+
+            printf("AdcOut=%d\n",adc_reading_signed);
+            //printf("Vin=%f\n",(double)adc); double not printing... need to use integer i guess
+            
+            
+            int32_t Vin_whole = adc_reading_signed / 32767;
+            int32_t Vin_dec = adc_reading_signed % 32767;
+            
+            Vin_whole *= 4.096;
+            Vin_dec *= 4.096;
+            
+            if(Vin_dec >= 32767)
+            {
+                Vin_whole++;
+                Vin_dec -= 32767;
+            }
+            
+            printf("Vin=%d + %d/32767 V\n\n",Vin_whole,Vin_dec);
+            
 
         } else {
             ESP_LOGE(TAG, "No ack, sensor not connected...skip...\n");
