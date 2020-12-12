@@ -1,0 +1,2 @@
+/home/enrr/.espressif/tools/xtensa-lx106-elf/esp-2020r3-49-gd5524c1-8.4.0/xtensa-lx106-elf/bin/xtensa-lx106-elf-ar qc libpthread.a  CMakeFiles/__idf_pthread.dir/pthread.c.obj CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.obj CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.obj
+/home/enrr/.espressif/tools/xtensa-lx106-elf/esp-2020r3-49-gd5524c1-8.4.0/xtensa-lx106-elf/bin/xtensa-lx106-elf-ranlib libpthread.a
