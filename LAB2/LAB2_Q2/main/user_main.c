@@ -136,13 +136,13 @@ void app_main(void)
     gpio_config(&io_conf);
 
     //Create semaphore
-    semaphore = xSemaphoreCreateBinary();
+    semaphore = xSemaphoreCreateMutex();
     xSemaphoreGive(semaphore);
 
     //start gpio task
     xTaskCreate(gpio_on_task, "gpio_on_task", 2048, NULL, 8, NULL);
-    xTaskCreate(gpio_off_task, "gpio_off_task", 2048, NULL, 9, NULL);
-    xTaskCreate(status_task, "status_task", 2048, NULL, 10, NULL);
+    xTaskCreate(gpio_off_task, "gpio_off_task", 2048, NULL, 8, NULL);
+    xTaskCreate(status_task, "status_task", 2048, NULL, 8, NULL);
     
 }
 
