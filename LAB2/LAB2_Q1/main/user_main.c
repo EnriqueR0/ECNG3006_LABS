@@ -33,10 +33,17 @@ static void gpio_on_task(void* arg)
     for (;;) 
     {
         //Try to take semaphore.
-        if(xSemaphoreTake(semaphore, (TickType_t) 10) == pdTRUE)
+        while(true)
         {
-            gpio_set_level(GPIO_OUTPUT_IO,1);
-            xSemaphoreGive(semaphore);
+            if(xSemaphoreTake(semaphore, (TickType_t) 10) == pdTRUE)
+            {
+                gpio_set_level(GPIO_OUTPUT_IO,1);
+                xSemaphoreGive(semaphore);
+                break;
+            }else
+            {
+                continue;
+            }
         }
 
         //0.5s active delay
@@ -66,10 +73,17 @@ static void gpio_off_task(void* arg)
     for (;;) 
     {
         //Try to take semaphore.
-        if(xSemaphoreTake(semaphore, (TickType_t) 10) == pdTRUE)
+        while(true)
         {
-            gpio_set_level(GPIO_OUTPUT_IO,0);
-            xSemaphoreGive(semaphore);
+            if(xSemaphoreTake(semaphore, (TickType_t) 10) == pdTRUE)
+            {
+                gpio_set_level(GPIO_OUTPUT_IO,0);
+                xSemaphoreGive(semaphore);
+                break;
+            }else
+            {
+                continue;
+            }
         }
 
         //0.5s active delay
@@ -104,6 +118,8 @@ static void status_task(void* arg)
 
 void app_main(void)
 {
+    ESP_LOGI(TAG,"Enrique Ramkissoon 816013485\n");
+
     //CONFIGURE OUTPUT
     gpio_config_t io_conf;
     //disable interrupt

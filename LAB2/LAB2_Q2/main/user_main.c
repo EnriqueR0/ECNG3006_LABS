@@ -32,12 +32,18 @@ static void gpio_on_task(void* arg)
 {
     for (;;) 
     {
-        printf("OnTask\n");
         //Try to take semaphore.
-        if(xSemaphoreTake(semaphore, (TickType_t) 10) == pdTRUE)
+        while(true)
         {
-            gpio_set_level(GPIO_OUTPUT_IO,1);
-            xSemaphoreGive(semaphore);
+            if(xSemaphoreTake(semaphore, (TickType_t) 10) == pdTRUE)
+            {
+                gpio_set_level(GPIO_OUTPUT_IO,1);
+                xSemaphoreGive(semaphore);
+                break;
+            }else
+            {
+                continue;
+            }
         }
 
         //0.5s active delay
@@ -66,13 +72,18 @@ static void gpio_off_task(void* arg)
 {
     for (;;) 
     {
-        printf("OffTask\n");
-        
         //Try to take semaphore.
-        if(xSemaphoreTake(semaphore, (TickType_t) 10) == pdTRUE)
+        while(true)
         {
-            gpio_set_level(GPIO_OUTPUT_IO,0);
-            xSemaphoreGive(semaphore);
+            if(xSemaphoreTake(semaphore, (TickType_t) 10) == pdTRUE)
+            {
+                gpio_set_level(GPIO_OUTPUT_IO,0);
+                xSemaphoreGive(semaphore);
+                break;
+            }else
+            {
+                continue;
+            }
         }
 
         //0.5s active delay
@@ -107,6 +118,8 @@ static void status_task(void* arg)
 
 void app_main(void)
 {
+    ESP_LOGI(TAG,"Enrique Ramkissoon 816013485\n");
+
     //CONFIGURE OUTPUT
     gpio_config_t io_conf;
     //disable interrupt
@@ -123,14 +136,12 @@ void app_main(void)
     gpio_config(&io_conf);
 
     //Create semaphore
-    semaphore = xSemaphoreCreateMutex();
+    semaphore = xSemaphoreCreateBinary();
     xSemaphoreGive(semaphore);
 
-    
-    //ALL TASKS HAVE SAME PRIORITY - Round Robin
     //start gpio task
-    xTaskCreate(gpio_on_task, "gpio_on_task", 2048, NULL, 10, NULL);
-    xTaskCreate(gpio_off_task, "gpio_off_task", 2048, NULL, 10, NULL);
+    xTaskCreate(gpio_on_task, "gpio_on_task", 2048, NULL, 8, NULL);
+    xTaskCreate(gpio_off_task, "gpio_off_task", 2048, NULL, 9, NULL);
     xTaskCreate(status_task, "status_task", 2048, NULL, 10, NULL);
     
 }
