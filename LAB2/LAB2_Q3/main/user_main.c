@@ -107,6 +107,7 @@ static void gpio_off_task(void* arg)
     }
 }
 
+//task to print a status message
 static void status_task(void* arg)
 {
     for(;;)
@@ -118,7 +119,7 @@ static void status_task(void* arg)
 
 void vApplicationIdleHook(void)
 {
-    //sleep for 100ms to avoid impacting performance
+    //sleep for 250ms 
     ESP_LOGI(TAG,"Going to sleep for 250ms");
     esp_sleep_enable_timer_wakeup(250000);
     esp_light_sleep_start();
