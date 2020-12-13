@@ -119,8 +119,8 @@ static void status_task(void* arg)
 void vApplicationIdleHook(void)
 {
     //sleep for 100ms to avoid impacting performance
-    ESP_LOGI(TAG,"Going to sleep for 100ms");
-    esp_sleep_enable_timer_wakeup(100000);
+    ESP_LOGI(TAG,"Going to sleep for 250ms");
+    esp_sleep_enable_timer_wakeup(250000);
     esp_light_sleep_start();
 }
 

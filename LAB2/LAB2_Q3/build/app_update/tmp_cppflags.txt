@@ -1,1 +1,1 @@
-afcc988 gpio v3.4-dev-357-g3aeaa893-dirty
+e4fd0b2-dirty gpio v3.4-dev-357-g3aeaa893-dirty
