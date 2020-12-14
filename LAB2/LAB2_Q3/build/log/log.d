@@ -3,7 +3,7 @@ log.o: /home/enrr/esp/ESP8266_RTOS_SDK/components/log/log.c \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_libc.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
- /home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q2/build/include/sdkconfig.h \
+ /home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q3/build/include/sdkconfig.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/heap/include/esp_heap_caps.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/esp_common/include/esp_err.h \
@@ -44,7 +44,7 @@ log.o: /home/enrr/esp/ESP8266_RTOS_SDK/components/log/log.c \
 
 /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h:
 
-/home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q2/build/include/sdkconfig.h:
+/home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q3/build/include/sdkconfig.h:
 
 /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h:
 

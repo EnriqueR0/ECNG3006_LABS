@@ -2,7 +2,7 @@ esp-mqtt/lib/mqtt_msg.o: \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/mqtt/esp-mqtt/lib/mqtt_msg.c \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/mqtt/esp-mqtt/include/mqtt_config.h \
- /home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q2/build/include/sdkconfig.h \
+ /home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q3/build/include/sdkconfig.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/mqtt/esp-mqtt/lib/include/platform.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/FreeRTOS.h \
@@ -86,7 +86,7 @@ esp-mqtt/lib/mqtt_msg.o: \
 
 /home/enrr/esp/ESP8266_RTOS_SDK/components/mqtt/esp-mqtt/include/mqtt_config.h:
 
-/home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q2/build/include/sdkconfig.h:
+/home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q3/build/include/sdkconfig.h:
 
 /home/enrr/esp/ESP8266_RTOS_SDK/components/mqtt/esp-mqtt/lib/include/platform.h:
 

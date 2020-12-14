@@ -4,7 +4,7 @@ src/spi_flash.o: \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/esp_common/include/esp_err.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/spi_register.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
- /home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q2/build/include/sdkconfig.h \
+ /home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q3/build/include/sdkconfig.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/pin_mux_register.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
@@ -29,7 +29,7 @@ src/spi_flash.o: \
 
 /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h:
 
-/home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q2/build/include/sdkconfig.h:
+/home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q3/build/include/sdkconfig.h:
 
 /home/enrr/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h:
 

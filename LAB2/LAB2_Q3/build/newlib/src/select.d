@@ -1,7 +1,7 @@
 src/select.o: \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/newlib/src/select.c \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/newlib/platform_include/sys/select.h \
- /home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q2/build/include/sdkconfig.h \
+ /home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q3/build/include/sdkconfig.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/vfs/include/esp_vfs.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/FreeRTOS.h \
  /home/enrr/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/FreeRTOSConfig.h \
@@ -39,7 +39,7 @@ src/select.o: \
 
 /home/enrr/esp/ESP8266_RTOS_SDK/components/newlib/platform_include/sys/select.h:
 
-/home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q2/build/include/sdkconfig.h:
+/home/enrr/esp/ECNG3006_LABS/LAB2/LAB2_Q3/build/include/sdkconfig.h:
 
 /home/enrr/esp/ESP8266_RTOS_SDK/components/vfs/include/esp_vfs.h:
 
