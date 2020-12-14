@@ -26,11 +26,11 @@ static const char *TAG = "main";
 
 /**
  * Brief:
- * This test code shows how to configure gpio and how to use gpio interrupt.
+ * Lab 1: Question 2
  *
  * Test:
  * Connect GPIO2 with GPIO0
- * Generate pulses on GPIO2 that triggers interrupt on GPIO0
+ * This code Generates pulses on GPIO2 that triggers interrupt on GPIO0
  *
  */
  
@@ -47,22 +47,15 @@ static const char *TAG = "main";
 
 SemaphoreHandle_t semaphore = NULL;
 
-//static xQueueHandle gpio_evt_queue = NULL;
-
+//isr handler fucntion. This is called on GP0 interrupt
 static void gpio_isr_handler(void *arg)
 {
-    //xQueueSendFromISR(gpio_evt_queue, &gpio_num, NULL);
-    
     xSemaphoreGiveFromISR(semaphore,pdFALSE);
 }
 
 static void gpio_task_example(void *arg)
 {
     for (;;) {
-        //if (xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
-        //    ESP_LOGI(TAG, "GPIO[%d] intr, val: %d\n", io_num, gpio_get_level(io_num));
-        //}
-        
         //Try to take semaphore.
         if(xSemaphoreTake(semaphore, (TickType_t) 10) == pdTRUE)
         {
@@ -98,9 +91,6 @@ void app_main(void)
     //enable pull-up mode
     io_conf.pull_up_en = 1;
     gpio_config(&io_conf);
-
-    //create a queue to handle gpio event from isr
-    //gpio_evt_queue = xQueueCreate(10, sizeof(uint32_t));
     
     //Create semaphore
     semaphore = xSemaphoreCreateBinary();
@@ -115,7 +105,9 @@ void app_main(void)
 
     int cnt = 0;
 
-    while (1) {
+    //When cnt is even, GPIO 2 is set low and when cnt is odd, GPIO 2 is set high
+    while (1) 
+    {
         ESP_LOGI(TAG, "cnt: %d\n", cnt++);
         vTaskDelay(1000 / portTICK_RATE_MS);
         gpio_set_level(GPIO_OUTPUT_IO_0, cnt % 2);

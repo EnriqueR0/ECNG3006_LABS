@@ -1,1 +1,1 @@
-402593a-dirty gpio v3.4-dev-357-g3aeaa893-dirty
+2697bf8-dirty gpio v3.4-dev-357-g3aeaa893-dirty
