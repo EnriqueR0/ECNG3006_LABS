@@ -32,11 +32,12 @@ static void gpio_on_task(void* arg)
 {
     for (;;) 
     {
-        //Try to take semaphore.
+        //Try to take semaphore. Wait until semaphore is taken
         while(true)
         {
             if(xSemaphoreTake(semaphore, (TickType_t) 10) == pdTRUE)
             {
+                ESP_LOGI("gpio_on_task","DEBUG: Setting GPIO high\n");
                 gpio_set_level(GPIO_OUTPUT_IO,1);
                 xSemaphoreGive(semaphore);
                 break;
@@ -72,11 +73,12 @@ static void gpio_off_task(void* arg)
 {
     for (;;) 
     {
-        //Try to take semaphore.
+        //Try to take semaphore. Wait until semaphore is taken
         while(true)
         {
             if(xSemaphoreTake(semaphore, (TickType_t) 10) == pdTRUE)
             {
+                ESP_LOGI("gpio_off_task", "DEBUG: Setting GPIO low\n");
                 gpio_set_level(GPIO_OUTPUT_IO,0);
                 xSemaphoreGive(semaphore);
                 break;
@@ -111,7 +113,7 @@ static void status_task(void* arg)
 {
     for(;;)
     {
-        ESP_LOGI(TAG,"The GPIO pin is currently: %d\n", gpio_get_level(GPIO_OUTPUT_IO));
+        ESP_LOGI(TAG,"STATUS: The GPIO pin is currently: %d\n", gpio_get_level(GPIO_OUTPUT_IO));
         vTaskDelay(1000 / portTICK_RATE_MS);
     }
 }
@@ -136,7 +138,7 @@ void app_main(void)
     gpio_config(&io_conf);
 
     //Create semaphore
-    semaphore = xSemaphoreCreateBinary();
+    semaphore = xSemaphoreCreateMutex();
     xSemaphoreGive(semaphore);
 
     //start gpio task

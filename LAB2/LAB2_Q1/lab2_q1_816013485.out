@@ -1,6 +1,5 @@
 --- idf_monitor on /dev/ttyUSB0 74880 ---
 --- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
-
  ets Jan  8 2013,rst cause:2, boot mode:(3,7)
 
 load 0x40100000, len 7136, room 16 
@@ -13,7 +12,7 @@ load 0x3ffe8420, len 3336, room 8
 tail 0
 chksum 0xb3
 I (43) boot: ESP-IDF v3.4-dev-357-g3aeaa893-dirty 2nd stage bootloader
-I (43) boot: compile time 00:34:40
+I (43) boot: compile time 23:09:38
 I (45) boot: SPI Speed      : 40MHz
 I (51) boot: SPI Mode       : DOUT
 I (57) boot: SPI Flash Size : 1MB
@@ -23,74 +22,114 @@ I (80) boot:  0 nvs              WiFi data        01 02 00009000 00006000
 I (92) boot:  1 phy_init         RF data          01 01 0000f000 00001000
 I (103) boot:  2 factory          factory app      00 00 00010000 000f0000
 I (115) boot: End of partition table
-I (121) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x146ac ( 83628) map
+I (121) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x146c8 ( 83656) map
 0x40210010: _stext at ??:?
 
-I (171) esp_image: segment 1: paddr=0x000246c4 vaddr=0x402246bc size=0x0574c ( 22348) map
-I (182) esp_image: segment 2: paddr=0x00029e18 vaddr=0x3ffe8000 size=0x003dc (   988) load
-I (182) esp_image: segment 3: paddr=0x0002a1fc vaddr=0x40100000 size=0x00080 (   128) load
-I (196) esp_image: segment 4: paddr=0x0002a284 vaddr=0x40100080 size=0x044bc ( 17596) load
+I (171) esp_image: segment 1: paddr=0x000246e0 vaddr=0x402246d8 size=0x0578c ( 22412) map
+I (182) esp_image: segment 2: paddr=0x00029e74 vaddr=0x3ffe8000 size=0x003dc (   988) load
+I (182) esp_image: segment 3: paddr=0x0002a258 vaddr=0x40100000 size=0x00080 (   128) load
+I (196) esp_image: segment 4: paddr=0x0002a2e0 vaddr=0x40100080 size=0x044bc ( 17596) load
 I (217) boot: Loaded app from partition at offset 0x10000
-I (247) main: Enrique Ramkissoon 816013485
+I (248) main: Enrique Ramkissoon 816013485
 
 I (250) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
-I (1252) main: The GPIO pin is currently: 0
+I (254) gpio_on_task: DEBUG: Setting GPIO high
 
-I (2252) main: The GPIO pin is currently: 1
+I (762) gpio_off_task: DEBUG: Setting GPIO low
 
-I (3252) main: The GPIO pin is currently: 1
+I (1264) main: STATUS: The GPIO pin is currently: 0
 
-I (4252) main: The GPIO pin is currently: 0
+I (1762) gpio_on_task: DEBUG: Setting GPIO high
 
-I (5252) main: The GPIO pin is currently: 0
+I (2262) main: STATUS: The GPIO pin is currently: 1
 
-I (6252) main: The GPIO pin is currently: 1
+I (2263) gpio_off_task: DEBUG: Setting GPIO low
 
-I (7252) main: The GPIO pin is currently: 0
+I (3262) main: STATUS: The GPIO pin is currently: 0
 
-I (8252) main: The GPIO pin is currently: 0
+I (3762) gpio_off_task: DEBUG: Setting GPIO low
 
-I (9252) main: The GPIO pin is currently: 1
+I (4262) main: STATUS: The GPIO pin is currently: 0
 
-I (10253) main: The GPIO pin is currently: 0
+I (4264) gpio_on_task: DEBUG: Setting GPIO high
 
-I (11253) main: The GPIO pin is currently: 0
+I (5262) main: STATUS: The GPIO pin is currently: 1
 
-I (12253) main: The GPIO pin is currently: 1
+I (5264) gpio_off_task: DEBUG: Setting GPIO low
 
-I (13253) main: The GPIO pin is currently: 0
+I (5765) gpio_on_task: DEBUG: Setting GPIO high
 
-I (14253) main: The GPIO pin is currently: 0
+I (6262) main: STATUS: The GPIO pin is currently: 1
 
-I (15253) main: The GPIO pin is currently: 1
+I (6762) gpio_off_task: DEBUG: Setting GPIO low
 
-I (16253) main: The GPIO pin is currently: 0
+I (7262) main: STATUS: The GPIO pin is currently: 0
 
-I (17253) main: The GPIO pin is currently: 0
+I (7264) gpio_on_task: DEBUG: Setting GPIO high
 
-I (18253) main: The GPIO pin is currently: 1
+I (8262) main: STATUS: The GPIO pin is currently: 1
 
-I (19253) main: The GPIO pin is currently: 0
+I (8264) gpio_off_task: DEBUG: Setting GPIO low
 
-I (20254) main: The GPIO pin is currently: 0
+I (8765) gpio_on_task: DEBUG: Setting GPIO high
 
-I (21254) main: The GPIO pin is currently: 1
+I (9262) main: STATUS: The GPIO pin is currently: 1
 
-I (22254) main: The GPIO pin is currently: 0
+I (9762) gpio_off_task: DEBUG: Setting GPIO low
 
-I (23254) main: The GPIO pin is currently: 0
+I (10263) main: STATUS: The GPIO pin is currently: 0
 
-I (24254) main: The GPIO pin is currently: 1
+I (10265) gpio_on_task: DEBUG: Setting GPIO high
 
-I (25254) main: The GPIO pin is currently: 0
+I (11263) main: STATUS: The GPIO pin is currently: 1
 
-I (26254) main: The GPIO pin is currently: 0
+I (11265) gpio_off_task: DEBUG: Setting GPIO low
 
-I (27254) main: The GPIO pin is currently: 1
+I (11763) gpio_on_task: DEBUG: Setting GPIO high
 
-I (28254) main: The GPIO pin is currently: 0
+I (12263) main: STATUS: The GPIO pin is currently: 1
 
-I (29254) main: The GPIO pin is currently: 0
+I (12763) gpio_off_task: DEBUG: Setting GPIO low
 
-I (30255) main: The GPIO pin is currently: 1
+I (13263) main: STATUS: The GPIO pin is currently: 0
+
+I (13265) gpio_on_task: DEBUG: Setting GPIO high
+
+I (14263) main: STATUS: The GPIO pin is currently: 1
+
+I (14265) gpio_off_task: DEBUG: Setting GPIO low
+
+I (14763) gpio_on_task: DEBUG: Setting GPIO high
+
+I (15263) main: STATUS: The GPIO pin is currently: 1
+
+I (15763) gpio_off_task: DEBUG: Setting GPIO low
+
+I (16263) main: STATUS: The GPIO pin is currently: 0
+
+I (16265) gpio_on_task: DEBUG: Setting GPIO high
+
+I (17263) main: STATUS: The GPIO pin is currently: 1
+
+I (17265) gpio_off_task: DEBUG: Setting GPIO low
+
+I (17766) gpio_on_task: DEBUG: Setting GPIO high
+
+I (18263) main: STATUS: The GPIO pin is currently: 1
+
+I (18763) gpio_off_task: DEBUG: Setting GPIO low
+
+I (19263) main: STATUS: The GPIO pin is currently: 0
+
+I (19265) gpio_on_task: DEBUG: Setting GPIO high
+
+I (20264) main: STATUS: The GPIO pin is currently: 1
+
+I (20266) gpio_off_task: DEBUG: Setting GPIO low
+
+I (20767) gpio_on_task: DEBUG: Setting GPIO high
+
+I (21264) main: STATUS: The GPIO pin is currently: 1
+
+I (21764) gpio_off_task: DEBUG: Setting GPIO low
 
