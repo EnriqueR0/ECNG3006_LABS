@@ -39,7 +39,6 @@ static void gpio_on_task(void* arg)
             {
                 ESP_LOGI("gpio_on_task", "DEBUG: Setting GPIO high\n");
                 gpio_set_level(GPIO_OUTPUT_IO,1);
-                xSemaphoreGive(semaphore);
                 break;
             }else
             {
@@ -64,6 +63,7 @@ static void gpio_on_task(void* arg)
             }
         }
 
+        xSemaphoreGive(semaphore);
         vTaskDelay(1000 / portTICK_RATE_MS);
     }
 }
@@ -80,7 +80,6 @@ static void gpio_off_task(void* arg)
             {
                 ESP_LOGI("gpio_off_task", "DEBUG: Setting GPIO low\n");
                 gpio_set_level(GPIO_OUTPUT_IO,0);
-                xSemaphoreGive(semaphore);
                 break;
             }else
             {
@@ -104,6 +103,8 @@ static void gpio_off_task(void* arg)
                 break;
             }
         }
+
+        xSemaphoreGive(semaphore);
 
         vTaskDelay(1000 / portTICK_RATE_MS);
     }

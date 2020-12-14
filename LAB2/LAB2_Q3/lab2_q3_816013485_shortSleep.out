@@ -22,13 +22,13 @@ I (80) boot:  0 nvs              WiFi data        01 02 00009000 00006000
 I (92) boot:  1 phy_init         RF data          01 01 0000f000 00001000
 I (103) boot:  2 factory          factory app      00 00 00010000 000f0000
 I (115) boot: End of partition table
-I (121) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x14764 ( 83812) map
+I (121) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x1476c ( 83820) map
 0x40210010: _stext at ??:?
 
-I (171) esp_image: segment 1: paddr=0x0002477c vaddr=0x40224774 size=0x057a8 ( 22440) map
-I (182) esp_image: segment 2: paddr=0x00029f2c vaddr=0x3ffe8000 size=0x003dc (   988) load
-I (183) esp_image: segment 3: paddr=0x0002a310 vaddr=0x40100000 size=0x00080 (   128) load
-I (196) esp_image: segment 4: paddr=0x0002a398 vaddr=0x40100080 size=0x044bc ( 17596) load
+I (171) esp_image: segment 1: paddr=0x00024784 vaddr=0x4022477c size=0x057a8 ( 22440) map
+I (182) esp_image: segment 2: paddr=0x00029f34 vaddr=0x3ffe8000 size=0x003dc (   988) load
+I (183) esp_image: segment 3: paddr=0x0002a318 vaddr=0x40100000 size=0x00080 (   128) load
+I (196) esp_image: segment 4: paddr=0x0002a3a0 vaddr=0x40100080 size=0x044bc ( 17596) load
 I (217) boot: Loaded app from partition at offset 0x10000
 I (250) main: Enrique Ramkissoon 816013485
 
@@ -37,61 +37,124 @@ I (256) gpio_on_task: DEBUG: Setting GPIO high
 
 I (764) gpio_off_task: DEBUG: Setting GPIO low
 
-I (1266) main: STATUS: The GPIO pin is currently: 0
+I (1262) main: STATUS: The GPIO pin is currently: 0
 
-I (1267) main: Going to sleep for 250ms
-I (1528) main: Going to sleep for 250ms
-I (1779) gpio_on_task: DEBUG: Setting GPIO high
+I (1263) main: Going to sleep for 250ms
+I (1524) main: Going to sleep for 250ms
+I (1775) gpio_on_task: DEBUG: Setting GPIO high
 
-I (2269) main: STATUS: The GPIO pin is currently: 1
+I (2265) main: STATUS: The GPIO pin is currently: 1
 
-I (2270) gpio_off_task: DEBUG: Setting GPIO low
+I (2275) gpio_off_task: DEBUG: Setting GPIO low
 
-I (2779) main: Going to sleep for 250ms
-I (3040) main: Going to sleep for 250ms
-I (3291) main: STATUS: The GPIO pin is currently: 0
+I (2785) main: Going to sleep for 250ms
+I (3047) main: Going to sleep for 250ms
+I (3298) main: STATUS: The GPIO pin is currently: 0
 
-I (3301) main: Going to sleep for 250ms
-I (3562) main: Going to sleep for 250ms
-I (3814) gpio_off_task: DEBUG: Setting GPIO low
+I (3308) main: Going to sleep for 250ms
+I (3569) main: Going to sleep for 250ms
+I (3820) gpio_off_task: DEBUG: Setting GPIO low
 
-I (4294) main: STATUS: The GPIO pin is currently: 0
+I (4300) main: STATUS: The GPIO pin is currently: 0
 
-I (4314) gpio_on_task: DEBUG: Setting GPIO high
+I (4321) gpio_on_task: DEBUG: Setting GPIO high
 
-I (4824) main: Going to sleep for 250ms
-I (5085) main: Going to sleep for 250ms
-I (5336) main: STATUS: The GPIO pin is currently: 1
+I (4830) main: Going to sleep for 250ms
+I (5091) main: Going to sleep for 250ms
+I (5342) main: STATUS: The GPIO pin is currently: 1
 
-I (5337) gpio_off_task: DEBUG: Setting GPIO low
+I (5343) gpio_off_task: DEBUG: Setting GPIO low
 
-I (5838) gpio_on_task: DEBUG: Setting GPIO high
+I (5844) gpio_on_task: DEBUG: Setting GPIO high
 
-I (6336) main: STATUS: The GPIO pin is currently: 1
+I (6342) main: STATUS: The GPIO pin is currently: 1
 
-I (6346) main: Going to sleep for 250ms
-I (6607) main: Going to sleep for 250ms
-I (6858) gpio_off_task: DEBUG: Setting GPIO low
+I (6352) main: Going to sleep for 250ms
+I (6613) main: Going to sleep for 250ms
+I (6865) gpio_off_task: DEBUG: Setting GPIO low
 
-I (7338) main: STATUS: The GPIO pin is currently: 0
+I (7345) main: STATUS: The GPIO pin is currently: 0
 
-I (7359) gpio_on_task: DEBUG: Setting GPIO high
+I (7366) gpio_on_task: DEBUG: Setting GPIO high
 
-I (7868) main: Going to sleep for 250ms
-I (8130) main: Going to sleep for 250ms
-I (8381) main: STATUS: The GPIO pin is currently: 1
+I (7875) main: Going to sleep for 250ms
+I (8136) main: Going to sleep for 250ms
+I (8387) main: STATUS: The GPIO pin is currently: 1
 
-I (8382) gpio_off_task: DEBUG: Setting GPIO low
+I (8388) gpio_off_task: DEBUG: Setting GPIO low
 
-I (8883) gpio_on_task: DEBUG: Setting GPIO high
+I (8889) gpio_on_task: DEBUG: Setting GPIO high
 
-I (9381) main: STATUS: The GPIO pin is currently: 1
+I (9387) main: STATUS: The GPIO pin is currently: 1
 
-I (9391) main: Going to sleep for 250ms
-I (9652) main: Going to sleep for 250ms
-I (9903) gpio_off_task: DEBUG: Setting GPIO low
+I (9397) main: Going to sleep for 250ms
+I (9658) main: Going to sleep for 250ms
+I (9909) gpio_off_task: DEBUG: Setting GPIO low
 
-I (10383) main: STATUS: The GPIO pin is currently: 0
+I (10389) main: STATUS: The GPIO pin is currently: 0
 
-I (10404) gpio_on_task: DEBUG: Setting GPIO high
+I (10410) gpio_on_task: DEBUG: Setting GPIO high
+
+I (10919) main: Going to sleep for 250ms
+I (11180) main: Going to sleep for 250ms
+I (11432) main: STATUS: The GPIO pin is currently: 1
+
+I (11433) gpio_off_task: DEBUG: Setting GPIO low
+
+I (11934) gpio_on_task: DEBUG: Setting GPIO high
+
+I (12432) main: STATUS: The GPIO pin is currently: 1
+
+I (12442) main: Going to sleep for 250ms
+I (12703) main: Going to sleep for 250ms
+I (12954) gpio_off_task: DEBUG: Setting GPIO low
+
+I (13434) main: STATUS: The GPIO pin is currently: 0
+
+I (13455) gpio_on_task: DEBUG: Setting GPIO high
+
+I (13964) main: Going to sleep for 250ms
+I (14225) main: Going to sleep for 250ms
+I (14476) main: STATUS: The GPIO pin is currently: 1
+
+I (14477) gpio_off_task: DEBUG: Setting GPIO low
+
+I (14978) gpio_on_task: DEBUG: Setting GPIO high
+
+I (15476) main: STATUS: The GPIO pin is currently: 1
+
+I (15486) main: Going to sleep for 250ms
+I (15748) main: Going to sleep for 250ms
+I (15999) gpio_off_task: DEBUG: Setting GPIO low
+
+I (16479) main: STATUS: The GPIO pin is currently: 0
+
+I (16500) gpio_on_task: DEBUG: Setting GPIO high
+
+I (17009) main: Going to sleep for 250ms
+I (17270) main: Going to sleep for 250ms
+I (17521) main: STATUS: The GPIO pin is currently: 1
+
+I (17522) gpio_off_task: DEBUG: Setting GPIO low
+
+I (18023) gpio_on_task: DEBUG: Setting GPIO high
+
+I (18521) main: STATUS: The GPIO pin is currently: 1
+
+I (18531) main: Going to sleep for 250ms
+I (18792) main: Going to sleep for 250ms
+I (19043) gpio_off_task: DEBUG: Setting GPIO low
+
+I (19523) main: STATUS: The GPIO pin is currently: 0
+
+I (19544) gpio_on_task: DEBUG: Setting GPIO high
+
+I (20054) main: Going to sleep for 250ms
+I (20315) main: Going to sleep for 250ms
+I (20566) main: STATUS: The GPIO pin is currently: 1
+
+I (20567) gpio_off_task: DEBUG: Setting GPIO low
+
+I (21068) gpio_on_task: DEBUG: Setting GPIO high
+
 
