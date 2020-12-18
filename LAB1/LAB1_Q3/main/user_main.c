@@ -199,7 +199,7 @@ static esp_err_t i2c_example_master_ads1115_init(i2c_port_t i2c_num)
     return ESP_OK;
 }
 
-static void i2c_task_example(void *arg)
+static void ads1115_task(void *arg)
 {
     uint8_t sensor_data[2];
     int ret;
@@ -219,16 +219,17 @@ static void i2c_task_example(void *arg)
             adc_reading = adc_reading << 8;
             adc_reading = adc_reading | sensor_data[1];
 
-            //ESP_LOGI(TAG,"ADC OUT 2c: %d\n",adc_reading);
-
             int16_t adc_reading_signed = (int16_t)adc_reading;
             portDOUBLE Vin = (((portDOUBLE)adc_reading_signed)/32767) * 4.096; //FSR = +-04.096
 
+            //printf modifier %f does not work on this platform. The following code is therefore an alternative method to print the fractional voltage value.
             int16_t Vin_whole = (int16_t)Vin; //extract the whole part of Vin
-            int16_t Vin_frac = (int16_t)((Vin - Vin_whole)*1000);
+            int16_t Vin_frac_1 = (int16_t)((Vin - Vin_whole)*10); //extract digit at 10^-1 position of Vin
+            int16_t Vin_frac_2 = (int16_t)((Vin - Vin_whole - (Vin_frac_1*0.1))*100); //extract digit at 10^-2 position of Vin
+            int16_t Vin_frac_3 = (int16_t)((Vin - Vin_whole - (Vin_frac_1*0.1) - (Vin_frac_2*0.01))*1000); //extract digit at 10^-3 position of Vin
 
             ESP_LOGI(TAG,"AdcOut = %d",adc_reading_signed);
-            ESP_LOGI(TAG,"Input Voltage = %d.%d V\n",Vin_whole,Vin_frac);
+            ESP_LOGI(TAG,"Input Voltage = %d.%d%d%d V\n",Vin_whole,Vin_frac_1,Vin_frac_2,Vin_frac_3);
 
         } else {
             ESP_LOGE(TAG, "No ack, sensor not connected...skip...\n");
@@ -243,5 +244,5 @@ static void i2c_task_example(void *arg)
 void app_main(void)
 {
     //start i2c task
-    xTaskCreate(i2c_task_example, "i2c_task_example", 2048, NULL, 10, NULL);
+    xTaskCreate(ads1115_task, "ads_task", 2048, NULL, 10, NULL);
 }

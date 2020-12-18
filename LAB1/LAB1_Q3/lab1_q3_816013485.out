@@ -1,5 +1,6 @@
 --- idf_monitor on /dev/ttyUSB0 74880 ---
 --- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+
  ets Jan  8 2013,rst cause:2, boot mode:(3,7)
 
 load 0x40100000, len 7136, room 16 
@@ -10,9 +11,9 @@ tail 0
 chksum 0xa7
 load 0x3ffe8420, len 3336, room 8 
 tail 0
-chksum 0xb7
+chksum 0xba
 I (43) boot: ESP-IDF v3.4-dev-357-g3aeaa893-dirty 2nd stage bootloader
-I (43) boot: compile time 21:32:41
+I (43) boot: compile time 01:59:34
 I (45) boot: SPI Speed      : 40MHz
 I (51) boot: SPI Mode       : DOUT
 I (57) boot: SPI Flash Size : 1MB
@@ -22,144 +23,58 @@ I (80) boot:  0 nvs              WiFi data        01 02 00009000 00006000
 I (92) boot:  1 phy_init         RF data          01 01 0000f000 00001000
 I (103) boot:  2 factory          factory app      00 00 00010000 000f0000
 I (115) boot: End of partition table
-I (121) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x158a8 ( 88232) map
+I (121) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x15940 ( 88384) map
 0x40210010: _stext at ??:?
 
-I (173) esp_image: segment 1: paddr=0x000258c0 vaddr=0x402258b8 size=0x05ac0 ( 23232) map
-I (184) esp_image: segment 2: paddr=0x0002b388 vaddr=0x3ffe8000 size=0x003dc (   988) load
-I (185) esp_image: segment 3: paddr=0x0002b76c vaddr=0x40100000 size=0x00080 (   128) load
-I (198) esp_image: segment 4: paddr=0x0002b7f4 vaddr=0x40100080 size=0x044bc ( 17596) load
+I (173) esp_image: segment 1: paddr=0x00025958 vaddr=0x40225950 size=0x05abc ( 23228) map
+I (184) esp_image: segment 2: paddr=0x0002b41c vaddr=0x3ffe8000 size=0x003dc (   988) load
+I (185) esp_image: segment 3: paddr=0x0002b800 vaddr=0x40100000 size=0x00080 (   128) load
+I (198) esp_image: segment 4: paddr=0x0002b888 vaddr=0x40100080 size=0x044bc ( 17596) load
 I (219) boot: Loaded app from partition at offset 0x10000
-I (355) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
-I (357) gpio: GPIO[0]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
-I (369) main: AdcOut = 0
-I (373) main: Input Voltage = 0.0 V
+I (345) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (347) gpio: GPIO[0]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (360) main: AdcOut = 0
+I (363) main: Input Voltage = 0.000 V
 
-I (875) main: AdcOut = 0
-I (875) main: Input Voltage = 0.0 V
+I (865) main: AdcOut = 0
+I (866) main: Input Voltage = 0.000 V
 
-I (1375) main: AdcOut = 0
-I (1375) main: Input Voltage = 0.0 V
+I (1365) main: AdcOut = 0
+I (1366) main: Input Voltage = 0.000 V
 
-I (1875) main: AdcOut = 0
-I (1875) main: Input Voltage = 0.0 V
+I (1865) main: AdcOut = 0
+I (1866) main: Input Voltage = 0.000 V
 
-I (2375) main: AdcOut = 0
-I (2375) main: Input Voltage = 0.0 V
+I (2365) main: AdcOut = 0
+I (2366) main: Input Voltage = 0.000 V
 
-I (2875) main: AdcOut = 0
-I (2875) main: Input Voltage = 0.0 V
+I (2865) main: AdcOut = 4768
+I (2866) main: Input Voltage = 0.596 V
 
-I (3375) main: AdcOut = 0
-I (3375) main: Input Voltage = 0.0 V
+I (3365) main: AdcOut = 4752
+I (3366) main: Input Voltage = 0.594 V
 
-I (3875) main: AdcOut = 0
-I (3875) main: Input Voltage = 0.0 V
+I (3865) main: AdcOut = 4720
+I (3866) main: Input Voltage = 0.590 V
 
-I (4375) main: AdcOut = 0
-I (4375) main: Input Voltage = 0.0 V
+I (4365) main: AdcOut = 12992
+I (4366) main: Input Voltage = 1.624 V
 
-I (4875) main: AdcOut = 0
-I (4875) main: Input Voltage = 0.0 V
+I (4865) main: AdcOut = 12992
+I (4866) main: Input Voltage = 1.624 V
 
-I (5375) main: AdcOut = 0
-I (5375) main: Input Voltage = 0.0 V
+I (5365) main: AdcOut = 12992
+I (5366) main: Input Voltage = 1.624 V
 
-I (5875) main: AdcOut = 0
-I (5875) main: Input Voltage = 0.0 V
+I (5865) main: AdcOut = 12992
+I (5866) main: Input Voltage = 1.624 V
 
-I (6375) main: AdcOut = 0
-I (6375) main: Input Voltage = 0.0 V
+I (6365) main: AdcOut = 12992
+I (6366) main: Input Voltage = 1.624 V
 
-I (6875) main: AdcOut = 0
-I (6875) main: Input Voltage = 0.0 V
+I (6865) main: AdcOut = 12992
+I (6866) main: Input Voltage = 1.624 V
 
-I (7375) main: AdcOut = 4928
-I (7375) main: Input Voltage = 0.616 V
+I (7365) main: AdcOut = 12992
+I (7366) main: Input Voltage = 1.624 V
 
-I (7875) main: AdcOut = 4848
-I (7875) main: Input Voltage = 0.606 V
-
-I (8375) main: AdcOut = 4864
-I (8375) main: Input Voltage = 0.608 V
-
-I (8875) main: AdcOut = 13024
-I (8875) main: Input Voltage = 1.628 V
-
-I (9375) main: AdcOut = 13024
-I (9375) main: Input Voltage = 1.628 V
-
-I (9876) main: AdcOut = 13040
-I (9876) main: Input Voltage = 1.630 V
-
-I (10376) main: AdcOut = 13040
-I (10376) main: Input Voltage = 1.630 V
-
-I (10876) main: AdcOut = 13040
-I (10876) main: Input Voltage = 1.630 V
-
-I (11376) main: AdcOut = 13040
-I (11376) main: Input Voltage = 1.630 V
-
-I (11876) main: AdcOut = 13040
-I (11876) main: Input Voltage = 1.630 V
-
-I (12376) main: AdcOut = 13040
-I (12376) main: Input Voltage = 1.630 V
-
-I (12876) main: AdcOut = 13040
-I (12876) main: Input Voltage = 1.630 V
-
-I (13376) main: AdcOut = 13040
-I (13376) main: Input Voltage = 1.630 V
-
-I (13876) main: AdcOut = 13040
-I (13876) main: Input Voltage = 1.630 V
-
-I (14376) main: AdcOut = 13040
-I (14376) main: Input Voltage = 1.630 V
-
-I (14876) main: AdcOut = 13024
-I (14876) main: Input Voltage = 1.628 V
-
-I (15376) main: AdcOut = 13040
-I (15376) main: Input Voltage = 1.630 V
-
-I (15876) main: AdcOut = 13040
-I (15876) main: Input Voltage = 1.630 V
-
-I (16376) main: AdcOut = 13040
-I (16376) main: Input Voltage = 1.630 V
-
-I (16876) main: AdcOut = 13024
-I (16876) main: Input Voltage = 1.628 V
-
-I (17376) main: AdcOut = 13024
-I (17376) main: Input Voltage = 1.628 V
-
-I (17876) main: AdcOut = 13040
-I (17876) main: Input Voltage = 1.630 V
-
-I (18376) main: AdcOut = 13040
-I (18376) main: Input Voltage = 1.630 V
-
-I (18876) main: AdcOut = 13040
-I (18876) main: Input Voltage = 1.630 V
-
-I (19376) main: AdcOut = 13040
-I (19376) main: Input Voltage = 1.630 V
-
-I (19877) main: AdcOut = 13040
-I (19877) main: Input Voltage = 1.630 V
-
-I (20377) main: AdcOut = 13024
-I (20377) main: Input Voltage = 1.628 V
-
-I (20877) main: AdcOut = 13040
-I (20877) main: Input Voltage = 1.630 V
-
-I (21377) main: AdcOut = 13040
-I (21377) main: Input Voltage = 1.630 V
-
-I (21877) main: AdcOut = 13040
-I (21877) main: Input Voltage = 1.630 V
