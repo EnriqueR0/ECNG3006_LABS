@@ -1,0 +1,37 @@
+--- idf_monitor on /dev/ttyUSB0 74880 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+
+ ets Jan  8 2013,rst cause:2, boot mode:(3,7)
+
+load 0x40100000, len 7136, room 16 
+tail 0
+chksum 0x1e
+load 0x3ffe8408, len 24, room 8 
+tail 0
+chksum 0xa7
+load 0x3ffe8420, len 3336, room 8 
+tail 0
+chksum 0xbd
+I (43) boot: ESP-IDF v3.4-dev-357-g3aeaa893-dirty 2nd stage bootloader
+I (43) boot: compile time 01:40:08
+I (45) boot: SPI Speed      : 40MHz
+I (51) boot: SPI Mode       : DOUT
+I (57) boot: SPI Flash Size : 1MB
+I (63) boot: Partition Table:
+I (69) boot: ## Label            Usage          Type ST Offset   Length
+I (80) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (92) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (103) boot:  2 factory          factory app      00 00 00010000 000f0000
+I (115) boot: End of partition table
+I (121) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x157e8 ( 88040) map
+0x40210010: _stext at ??:?
+
+I (173) esp_image: segment 1: paddr=0x00025800 vaddr=0x402257f8 size=0x05a98 ( 23192) map
+I (184) esp_image: segment 2: paddr=0x0002b2a0 vaddr=0x3ffe8000 size=0x003dc (   988) load
+I (185) esp_image: segment 3: paddr=0x0002b684 vaddr=0x40100000 size=0x00080 (   128) load
+I (198) esp_image: segment 4: paddr=0x0002b70c vaddr=0x40100080 size=0x044bc ( 17596) load
+I (219) boot: Loaded app from partition at offset 0x10000
+I (344) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (349) gpio: GPIO[0]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (404) main: sensor_data = 0x39e0
+
