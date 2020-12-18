@@ -1,0 +1,122 @@
+--- idf_monitor on /dev/ttyUSB0 74880 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+
+ ets Jan  8 2013,rst cause:2, boot mode:(3,7)
+
+load 0x40100000, len 7136, room 16 
+tail 0
+chksum 0x1e
+load 0x3ffe8408, len 24, room 8 
+tail 0
+chksum 0xa7
+load 0x3ffe8420, len 3336, room 8 
+tail 0
+chksum 0xb2
+I (43) boot: ESP-IDF v3.4-dev-357-g3aeaa893-dirty 2nd stage bootloader
+I (43) boot: compile time 02:43:52
+I (45) boot: SPI Speed      : 40MHz
+I (51) boot: SPI Mode       : DOUT
+I (57) boot: SPI Flash Size : 1MB
+I (63) boot: Partition Table:
+I (69) boot: ## Label            Usage          Type ST Offset   Length
+I (80) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (92) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (103) boot:  2 factory          factory app      00 00 00010000 000f0000
+I (115) boot: End of partition table
+I (121) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x15940 ( 88384) map
+0x40210010: _stext at ??:?
+
+I (173) esp_image: segment 1: paddr=0x00025958 vaddr=0x40225950 size=0x05abc ( 23228) map
+I (184) esp_image: segment 2: paddr=0x0002b41c vaddr=0x3ffe8000 size=0x003dc (   988) load
+I (185) esp_image: segment 3: paddr=0x0002b800 vaddr=0x40100000 size=0x00080 (   128) load
+I (198) esp_image: segment 4: paddr=0x0002b888 vaddr=0x40100080 size=0x044bc ( 17596) load
+I (219) boot: Loaded app from partition at offset 0x10000
+I (345) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (347) gpio: GPIO[0]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (360) main: AdcOut = 0
+I (363) main: Input Voltage = 0.000 V
+
+I (865) main: AdcOut = 26080
+I (866) main: Input Voltage = 3.260 V
+
+I (1365) main: AdcOut = 26096
+I (1366) main: Input Voltage = 3.262 V
+
+I (1865) main: AdcOut = 26096
+I (1866) main: Input Voltage = 3.262 V
+
+I (2365) main: AdcOut = 26080
+I (2366) main: Input Voltage = 3.260 V
+
+I (2865) main: AdcOut = 26096
+I (2866) main: Input Voltage = 3.262 V
+
+I (3365) main: AdcOut = 26080
+I (3366) main: Input Voltage = 3.260 V
+
+I (3865) main: AdcOut = 26096
+I (3866) main: Input Voltage = 3.262 V
+
+I (4365) main: AdcOut = 26096
+I (4366) main: Input Voltage = 3.262 V
+
+I (4865) main: AdcOut = 26096
+I (4866) main: Input Voltage = 3.262 V
+
+I (5365) main: AdcOut = 26096
+I (5366) main: Input Voltage = 3.262 V
+
+I (5865) main: AdcOut = 26080
+I (5866) main: Input Voltage = 3.260 V
+
+I (6365) main: AdcOut = 26096
+I (6366) main: Input Voltage = 3.262 V
+
+I (6865) main: AdcOut = 26096
+I (6866) main: Input Voltage = 3.262 V
+
+I (7365) main: AdcOut = 26096
+I (7366) main: Input Voltage = 3.262 V
+
+I (7865) main: AdcOut = 26096
+I (7866) main: Input Voltage = 3.262 V
+
+I (8365) main: AdcOut = 26096
+I (8366) main: Input Voltage = 3.262 V
+
+I (8865) main: AdcOut = 26096
+I (8866) main: Input Voltage = 3.262 V
+
+I (9365) main: AdcOut = 26096
+I (9366) main: Input Voltage = 3.262 V
+
+I (9865) main: AdcOut = 26112
+I (9866) main: Input Voltage = 3.264 V
+
+I (10366) main: AdcOut = 26096
+I (10367) main: Input Voltage = 3.262 V
+
+I (10866) main: AdcOut = 26096
+I (10867) main: Input Voltage = 3.262 V
+
+I (11366) main: AdcOut = 26096
+I (11367) main: Input Voltage = 3.262 V
+
+I (11866) main: AdcOut = 26096
+I (11867) main: Input Voltage = 3.262 V
+
+I (12366) main: AdcOut = 26096
+I (12367) main: Input Voltage = 3.262 V
+
+I (12866) main: AdcOut = 26096
+I (12867) main: Input Voltage = 3.262 V
+
+I (13366) main: AdcOut = 26112
+I (13367) main: Input Voltage = 3.264 V
+
+I (13866) main: AdcOut = 26096
+I (13867) main: Input Voltage = 3.262 V
+
+I (14366) main: AdcOut = 26096
+I (14367) main: Input Voltage = 3.262 V
+
